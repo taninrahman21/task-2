@@ -1,6 +1,13 @@
 const slider = document.querySelector('.products');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const menuBar = document.querySelector(".menu-bar");
+const navbar = document.querySelector(".nav-links");
+
+menuBar.addEventListener("click", () => {
+  navbar.classList.toggle("show-links");
+  console.log("clicked")
+})
 
 const lightImg1 = "images/lightring.png";
 const lightImg2 = "images/lightpic2.png";
@@ -44,10 +51,6 @@ rightImg2.addEventListener('mouseout', () => {
   rightImg2.src = lightImg4;
 });
 
-
-document.getElementById("showLinks").addEventListener("click", () => {
-    document.getElementById("mobileNav").classList.toggle("active");
-})
 
 let slideIndex = 0;
 
